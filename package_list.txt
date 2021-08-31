@@ -1,0 +1,10 @@
+yay
+git
+curl
+tmux
+neovim
+exa
+rg
+fzf
+alacritty
+ranger
