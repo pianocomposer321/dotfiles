@@ -1,3 +1,4 @@
+stow
 yay
 git
 curl
