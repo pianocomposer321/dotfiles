@@ -1,0 +1,41 @@
+#!/bin/bash
+
+#
+# # bre - batch rename
+# # Usage: bre <command> <files>
+# # Rename files in bulk by using the provided sed <command> on their filenames
+
+# E.G. You have the following files:
+  #  Artist 1 - Song 3fd118dd-1cb9-4344-a9d3-9edd175f8740.mp3
+  #  Artist 1 - Song 49c349ed-f6a4-42fe-96c3-c37009d0f19e.mp3
+  #  Artist 1 - Song 78d8d6f4-6184-48d9-aa44-1aa7fd8ab193.mp3
+  #  Artist 2 - Song 2ffde7eb-1132-4351-9799-61c2c4099c15.mp3
+  #  Artist 2 - Song d93021bc-79bb-4c87-9bf4-dcb5f41533f6.mp3
+  #  Artist 2 - Song f3feee9b-b940-44c2-9e29-6df17a5e8b85.mp3
+  #  Artist 3 - Song 937f2cdc-b1df-459f-9864-b7f3f7189f91.mp3
+  #  Artist 3 - Song 9c06ab56-f662-4d48-8ffe-32e4f5e6c2b5.mp3
+  #  Artist 3 - Song ecaed9f9-665f-4ab2-9e73-bcaeea4e5cf3.mp3
+# In order to get them into the format "Song.mp3", you could use the following command:
+  #  $ batch_rename 's/.* - \(.*\).mp3/\1.mp3/' *
+# After running this command, the files would look like this:
+  #  Song 3fd118dd-1cb9-4344-a9d3-9edd175f8740.mp3
+  #  Song 49c349ed-f6a4-42fe-96c3-c37009d0f19e.mp3
+  #  Song 78d8d6f4-6184-48d9-aa44-1aa7fd8ab193.mp3
+  #  Song 2ffde7eb-1132-4351-9799-61c2c4099c15.mp3
+  #  Song d93021bc-79bb-4c87-9bf4-dcb5f41533f6.mp3
+  #  Song f3feee9b-b940-44c2-9e29-6df17a5e8b85.mp3
+  #  Song 937f2cdc-b1df-459f-9864-b7f3f7189f91.mp3
+  #  Song 9c06ab56-f662-4d48-8ffe-32e4f5e6c2b5.mp3
+  #  Song ecaed9f9-665f-4ab2-9e73-bcaeea4e5cf3.mp3
+  # NOTE: all arguments except for the last one are directly passes along to sed. This includes flags, so any flags you include are sed falgs, not bre specific ones.
+
+command=$1  # The command is the first argument
+shift  # This shifts the variables for each argument, i.e. $2 becomes $1, $3 becomes $2, etc.
+files=("$@")  # $files is an array of all the remaining arguments ($2, $3, $4...)
+
+for file in ${!files[@]}; do  # Loop through the indecies of $files
+    filename=${files[$file]}  # $filename is the file at index $file
+    new_filename=$(echo $filename | sed $command)  # Apply sed command to the name of the file, and store the result in $new_filename
+    [ "$filename" = "$new_filename" ] && continue  # If the new filename is the same as the old one, do nothing
+    mv "$filename" "$new_filename"  # Otherwise rename the old file to the new name
+done
