@@ -1,0 +1,21 @@
+local o = vim.o
+local wo = vim.wo
+local bo = vim.bo
+
+vim.opt.expandtab = true
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.scrolloff = 3
+vim.opt.completeopt = "menuone,noselect"
+vim.opt.splitright = true
+vim.opt.inccommand = "nosplit"
+vim.opt.nu = true
+vim.opt.relativenumber = true
+vim.opt.cul = true
+vim.opt.undofile = true
+vim.opt.swapfile = false
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.pumblend = 30
+vim.opt.pumheight = 5
