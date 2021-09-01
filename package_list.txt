@@ -5,7 +5,7 @@ curl
 tmux
 neovim
 exa
-rg
+ripgrep
 fzf
 alacritty
 ranger
