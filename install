@@ -1,3 +1,8 @@
 #!/bin/bash
 
-sudo pacman -S - < package_list.txt
+sudo pacman -S --noconfirm --needed - < package_list.txt
+
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+chsh -s $(which fish)

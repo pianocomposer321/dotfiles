@@ -1,5 +1,6 @@
 stow
 yay
+fish
 git
 curl
 tmux
@@ -8,4 +9,5 @@ exa
 ripgrep
 fzf
 alacritty
+starship
 ranger
