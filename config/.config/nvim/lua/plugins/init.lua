@@ -12,6 +12,14 @@ local status = require("packer").startup(function(use)
         branch = "dev"
     }
 
+    -- use 'Vimjas/vim-python-pep8-indent'
+    use {
+        'sheerun/vim-polyglot',
+        config = function()
+            vim.g.polyglot_disabled = {'ftdetect'}  -- I only want this for indentation
+        end
+    }
+
     use {
         'tpope/vim-fugitive'
     }
