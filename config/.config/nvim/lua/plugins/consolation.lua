@@ -4,8 +4,9 @@ local Wrapper = require("consolation").Wrapper
 local FloatermWrapper = Wrapper:new()
 
 function M.setup()
-    local floaterm = require("consolation.defaults.floaterm")
-    require("consolation").setup(floaterm)
+    -- local floaterm = require("consolation.defaults.floaterm")
+    local bot = require("consolation.defaults.bot")
+    require("consolation").setup(bot)
 end
 
 function M.toggle()
