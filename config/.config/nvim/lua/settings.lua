@@ -1,7 +1,7 @@
 vim.opt.expandtab = true
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
+-- vim.opt.tabstop = 4
+-- vim.opt.softtabstop = 4
+-- vim.opt.shiftwidth = 4
 vim.opt.scrolloff = 3
 vim.opt.completeopt = "menuone,noselect"
 vim.opt.splitright = true

@@ -103,6 +103,7 @@ local status = require("packer").startup(function(use)
         'famiu/feline.nvim',
         requires = 'lewis6991/gitsigns.nvim'
     }
+    use 'tpope/vim-sleuth'
     use {
         "nanozuki/tabby.nvim",
     }
