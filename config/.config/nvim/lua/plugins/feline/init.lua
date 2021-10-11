@@ -1,5 +1,7 @@
 -- ~/.config/nvim/lua/plugins/feline/init.lua
 
+require("gitsigns").setup()
+
 local colors = require 'plugins/feline/colors'
 
 local vi_mode_colors = {
