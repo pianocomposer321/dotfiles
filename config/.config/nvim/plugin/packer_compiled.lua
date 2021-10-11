@@ -74,37 +74,65 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/composer3/.local/share/nvim/site/pack/packer/start/FTerm.nvim"
   },
+  ["asyncrun.vim"] = {
+    loaded = true,
+    path = "/home/composer3/.local/share/nvim/site/pack/packer/start/asyncrun.vim"
+  },
+  ["cmp-buffer"] = {
+    loaded = true,
+    path = "/home/composer3/.local/share/nvim/site/pack/packer/start/cmp-buffer"
+  },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/home/composer3/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp"
+  },
+  ["cmp-nvim-lua"] = {
+    loaded = true,
+    path = "/home/composer3/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua"
+  },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "/home/composer3/.local/share/nvim/site/pack/packer/start/cmp-path"
+  },
   ["consolation.nvim"] = {
     loaded = true,
     path = "/home/composer3/.local/share/nvim/site/pack/packer/start/consolation.nvim"
+  },
+  ["feline.nvim"] = {
+    loaded = true,
+    path = "/home/composer3/.local/share/nvim/site/pack/packer/start/feline.nvim"
   },
   ["fzf-lua"] = {
     loaded = true,
     path = "/home/composer3/.local/share/nvim/site/pack/packer/start/fzf-lua"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/home/composer3/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
+  },
   ["lsp_signature.nvim"] = {
     loaded = true,
     path = "/home/composer3/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim"
   },
-  ["lualine.nvim"] = {
+  ["markdown-preview.nvim"] = {
     loaded = true,
-    path = "/home/composer3/.local/share/nvim/site/pack/packer/start/lualine.nvim"
-  },
-  ["nlua.nvim"] = {
-    loaded = true,
-    path = "/home/composer3/.local/share/nvim/site/pack/packer/start/nlua.nvim"
+    path = "/home/composer3/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/home/composer3/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
   },
+  ["nvim-bqf"] = {
+    loaded = true,
+    path = "/home/composer3/.local/share/nvim/site/pack/packer/start/nvim-bqf"
+  },
+  ["nvim-cmp"] = {
+    loaded = true,
+    path = "/home/composer3/.local/share/nvim/site/pack/packer/start/nvim-cmp"
+  },
   ["nvim-comment"] = {
     loaded = true,
     path = "/home/composer3/.local/share/nvim/site/pack/packer/start/nvim-comment"
-  },
-  ["nvim-compe"] = {
-    loaded = true,
-    path = "/home/composer3/.local/share/nvim/site/pack/packer/start/nvim-compe"
   },
   ["nvim-dap"] = {
     loaded = true,
@@ -118,26 +146,29 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/composer3/.local/share/nvim/site/pack/packer/start/nvim-fzf"
   },
+  ["nvim-lsp-installer"] = {
+    loaded = true,
+    path = "/home/composer3/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/composer3/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
-  },
-  ["nvim-lspinstall"] = {
-    loaded = true,
-    path = "/home/composer3/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
   },
   ["nvim-tmux-navigation"] = {
     loaded = true,
     path = "/home/composer3/.local/share/nvim/site/pack/packer/start/nvim-tmux-navigation"
   },
   ["nvim-tree.lua"] = {
-    config = { "\27LJ\1\2®\1\0\0\2\0\a\0\0174\0\0\0007\0\1\0%\1\3\0:\1\2\0004\0\0\0007\0\1\0'\1\1\0:\1\4\0004\0\0\0007\0\1\0'\1\0\0:\1\5\0004\0\0\0007\0\1\0'\1\0\0:\1\6\0G\0\1\0\27nvim_tree_hijack_netrw\28nvim_tree_disable_netrw\29nvim_tree_indent_markers\nright\19nvim_tree_side\6g\bvim\0" },
     loaded = true,
     path = "/home/composer3/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/composer3/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+  },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "/home/composer3/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -156,14 +187,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/composer3/.local/share/nvim/site/pack/packer/start/plenary.nvim"
   },
+  ["rg.nvim"] = {
+    loaded = true,
+    path = "/home/composer3/.local/share/nvim/site/pack/packer/start/rg.nvim"
+  },
   ["surround.nvim"] = {
     loaded = true,
     path = "/home/composer3/.local/share/nvim/site/pack/packer/start/surround.nvim"
   },
-  ["tabline.nvim"] = {
-    config = { '\27LJ\1\2†\2\0\0\2\0\a\0\v4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0>\0\2\0014\0\4\0007\0\5\0%\1\6\0>\0\2\1G\0\1\0­\1                set guioptions-=e " Use showtabline in gui vim\n                set sessionoptions+=tabpages,globals " store tabpages and globals in session\n            \bcmd\bvim\1\0\1\venable\2\nsetup\ftabline\frequire\0' },
+  ["tabby.nvim"] = {
     loaded = true,
-    path = "/home/composer3/.local/share/nvim/site/pack/packer/start/tabline.nvim"
+    path = "/home/composer3/.local/share/nvim/site/pack/packer/start/tabby.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/composer3/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
   ["vim-floaterm"] = {
     loaded = true,
@@ -172,6 +210,10 @@ _G.packer_plugins = {
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/composer3/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+  },
+  ["vim-terminal-help"] = {
+    loaded = true,
+    path = "/home/composer3/.local/share/nvim/site/pack/packer/start/vim-terminal-help"
   },
   ["yabs.nvim"] = {
     loaded = true,
@@ -188,14 +230,6 @@ time([[Config for FTerm.nvim]], false)
 time([[Config for onedark.nvim]], true)
 try_loadstring("\27LJ\1\0025\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\fonedark\frequire\0", "config", "onedark.nvim")
 time([[Config for onedark.nvim]], false)
--- Config for: tabline.nvim
-time([[Config for tabline.nvim]], true)
-try_loadstring('\27LJ\1\2†\2\0\0\2\0\a\0\v4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0>\0\2\0014\0\4\0007\0\5\0%\1\6\0>\0\2\1G\0\1\0­\1                set guioptions-=e " Use showtabline in gui vim\n                set sessionoptions+=tabpages,globals " store tabpages and globals in session\n            \bcmd\bvim\1\0\1\venable\2\nsetup\ftabline\frequire\0', "config", "tabline.nvim")
-time([[Config for tabline.nvim]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-try_loadstring("\27LJ\1\2®\1\0\0\2\0\a\0\0174\0\0\0007\0\1\0%\1\3\0:\1\2\0004\0\0\0007\0\1\0'\1\1\0:\1\4\0004\0\0\0007\0\1\0'\1\0\0:\1\5\0004\0\0\0007\0\1\0'\1\0\0:\1\6\0G\0\1\0\27nvim_tree_hijack_netrw\28nvim_tree_disable_netrw\29nvim_tree_indent_markers\nright\19nvim_tree_side\6g\bvim\0", "config", "nvim-tree.lua")
-time([[Config for nvim-tree.lua]], false)
 if should_profile then save_profiles() end
 
 end)

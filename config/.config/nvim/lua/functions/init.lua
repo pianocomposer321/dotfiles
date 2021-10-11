@@ -16,4 +16,8 @@ function M.map(mode, lhs, rhs, options)
     vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
+function _G.P(...)
+    print(vim.inspect(...))
+end
+
 return M

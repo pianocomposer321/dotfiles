@@ -17,4 +17,23 @@ function M.make_session(quit)
     if quit then vim.cmd("wqa") end
 end
 
+function M.asyncrun_callback(function_string)
+    vim.api.nvim_command('autocmd User AsyncRunStop ++once if g:asyncrun_status ==? "success" | echo "executing callback" | call luaeval("' .. function_string .. '") | endif')
+end
+
+function M.build()
+    local command = "echo building..."
+    vim.fn['asyncrun#run']('', {}, command)
+end
+
+function M.run()
+    local command = "echo running..."
+    vim.fn['asyncrun#run']('', {}, command)
+end
+
+function M.build_and_run()
+    M.asyncrun_callback("require('utils').run()")
+    M.build()
+end
+
 return M

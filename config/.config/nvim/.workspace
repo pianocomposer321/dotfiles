@@ -3,17 +3,16 @@ let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-
 let v:this_session=expand("<sfile>:p")
 silent only
 silent tabonly
-cd ~/.config/nvim
+cd ~/dotfiles/config/.config/nvim
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +3 lua/mappings/yabs.lua
-badd +0 lua/plugins/yabs.lua
-badd +0 lua/plugins/consolation.lua
+badd +212 lua/plugins/feline/init.lua
+badd +8 ~/dotfiles/config/.config/nvim/lua/plugins/init.lua
 argglobal
 %argdel
-edit lua/plugins/yabs.lua
+edit lua/plugins/feline/init.lua
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -30,10 +29,9 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 90 + 91) / 182)
-exe 'vert 2resize ' . ((&columns * 91 + 91) / 182)
+exe 'vert 1resize ' . ((&columns * 118 + 119) / 238)
+exe 'vert 2resize ' . ((&columns * 119 + 119) / 238)
 argglobal
-balt lua/mappings/yabs.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -44,38 +42,38 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 8 - ((7 * winheight(0) + 27) / 55)
+let s:l = 255 - ((27 * winheight(0) + 25) / 50)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 255
+normal! 0
+wincmd w
+argglobal
+if bufexists("~/dotfiles/config/.config/nvim/lua/plugins/init.lua") | buffer ~/dotfiles/config/.config/nvim/lua/plugins/init.lua | else | edit ~/dotfiles/config/.config/nvim/lua/plugins/init.lua | endif
+if &buftype ==# 'terminal'
+  silent file ~/dotfiles/config/.config/nvim/lua/plugins/init.lua
+endif
+balt lua/plugins/feline/init.lua
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 8 - ((7 * winheight(0) + 25) / 50)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 8
-normal! 013|
+normal! 05|
 wincmd w
-argglobal
-if bufexists("lua/plugins/consolation.lua") | buffer lua/plugins/consolation.lua | else | edit lua/plugins/consolation.lua | endif
-if &buftype ==# 'terminal'
-  silent file lua/plugins/consolation.lua
-endif
-balt lua/mappings/yabs.lua
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 20 - ((19 * winheight(0) + 27) / 55)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 20
-normal! 0
-wincmd w
-exe 'vert 1resize ' . ((&columns * 90 + 91) / 182)
-exe 'vert 2resize ' . ((&columns * 91 + 91) / 182)
+exe 'vert 1resize ' . ((&columns * 118 + 119) / 238)
+exe 'vert 2resize ' . ((&columns * 119 + 119) / 238)
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0&& getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

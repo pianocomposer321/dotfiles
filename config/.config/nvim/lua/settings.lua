@@ -1,7 +1,3 @@
-local o = vim.o
-local wo = vim.wo
-local bo = vim.bo
-
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -19,3 +15,5 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.pumblend = 30
 vim.opt.pumheight = 5
+vim.opt.hidden = true
+vim.opt.signcolumn = "yes"

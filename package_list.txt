@@ -11,3 +11,7 @@ fzf
 alacritty
 starship
 ranger
+awesome
+picom
+playerctl
+lxappearance

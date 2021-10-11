@@ -113,7 +113,7 @@ font:
     #   - (Windows) Consolas
     # family: Consolas NF
     # family: Inconsolata
-    family: JetBrainsMono Nerd Font
+    family: JetBrainsMono Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
@@ -152,7 +152,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 10.0
+  size: 9.5
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -177,34 +177,74 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 
+schemes:
+  one-dark-old: &one-dark-old
+    primary:
+      background: '0x1e2127'
+      foreground: '0xabb2bf'
+
+    # Normal colors
+    normal:
+      black:   '0x1e2127'
+      red:     '0xe06c75'
+      green:   '0x98c379'
+      yellow:  '0xd19a66'
+      blue:    '0x61afef'
+      magenta: '0xc678dd'
+      cyan:    '0x56b6c2'
+      white:   '0xabb2bf'
+
+    # Bright colors
+    bright:
+      black:   '0x5c6370'
+      red:     '0xe06c75'
+      green:   '0x98c379'
+      yellow:  '0xd19a66'
+      blue:    '0x61afef'
+      magenta: '0xc678dd'
+      cyan:    '0x56b6c2'
+      white:   '0xffffff'
+  one-dark: &one-dark
+    primary:
+      background: '0x282c34'
+      foreground: '0xabb2bf'
+
+    # Selection colors
+    selection:
+      text:       CellForeground
+      background: '0x393f4a'
+
+    # Normal colors
+    normal:
+      black:   '0x20232A'
+      red:     '0xe86671'
+      green:   '0x98c379'
+      yellow:  '0xe0af68'
+      blue:    '0x61afef'
+      magenta: '0xc678dd'
+      cyan:    '0x56b6c2'
+      white:   '0x798294'
+
+    # Bright colors
+    bright:
+      black:   '0x5c6370'
+      red:     '0xe86671'
+      green:   '0x98c379'
+      yellow:  '0xe0af68'
+      blue:    '0x61afef'
+      magenta: '0xc678dd'
+      cyan:    '0x56b6c2'
+      white:   '0xabb2bf'
+
+    indexed_colors:
+      - { index: 16, color: '0xd19a66' }
+      - { index: 17, color: '0xf65866' }
+
+
 # Colors (One Dark)
-colors:
+# colors: *one-dark-old
+colors: *one-dark
   # Default colors
-  primary:
-    background: '0x1e2127'
-    foreground: '0xabb2bf'
-
-  # Normal colors
-  normal:
-    black:   '0x1e2127'
-    red:     '0xe06c75'
-    green:   '0x98c379'
-    yellow:  '0xd19a66'
-    blue:    '0x61afef'
-    magenta: '0xc678dd'
-    cyan:    '0x56b6c2'
-    white:   '0xabb2bf'
-
-  # Bright colors
-  bright:
-    black:   '0x5c6370'
-    red:     '0xe06c75'
-    green:   '0x98c379'
-    yellow:  '0xd19a66'
-    blue:    '0x61afef'
-    magenta: '0xc678dd'
-    cyan:    '0x56b6c2'
-    white:   '0xffffff'
 
 # Bell
 #
@@ -251,7 +291,7 @@ colors:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-#background_opacity: 1.0
+background_opacity: 1.0
 
 #selection:
   # This string contains all characters that are used as separators for
