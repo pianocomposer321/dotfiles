@@ -1,3 +1,5 @@
+local map = require("functions").map
+
 local M = {}
 
 function M.setup()
@@ -11,6 +13,10 @@ function M.setup()
             -- previous = "<M-\>",
         }
     }
+    map("t", "<M-h>", "<CMD>lua require'nvim-tmux-navigation'.NvimTmuxNavigateLeft()<CR>")
+    map("t", "<M-j>", "<CMD>lua require'nvim-tmux-navigation'.NvimTmuxNavigateDown()<CR>")
+    map("t", "<M-k>", "<CMD>lua require'nvim-tmux-navigation'.NvimTmuxNavigateUp()<CR>")
+    map("t", "<M-l>", "<CMD>lua require'nvim-tmux-navigation'.NvimTmuxNavigateRight()<CR>")
 end
 
 return M
