@@ -32,6 +32,10 @@ function M.setup()
     languages.python = {tasks = {}}
     languages.python.tasks.run = {command = "python3 %"}
 
+    languages.rust = {tasks = {}}
+    languages.rust.tasks.run = {command = "cargo run"}
+    languages.rust.tasks.build = {command = "cargo build"}
+
     yabs:setup {
         default_output = "consolation",
         languages = languages

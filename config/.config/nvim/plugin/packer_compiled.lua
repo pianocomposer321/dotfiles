@@ -211,6 +211,15 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/composer3/.local/share/nvim/site/pack/packer/start/vim-fugitive"
   },
+  ["vim-polyglot"] = {
+    config = { "\27LJ\1\2@\0\0\2\0\4\0\0054\0\0\0007\0\1\0003\1\3\0:\1\2\0G\0\1\0\1\2\0\0\rftdetect\22polyglot_disabled\6g\bvim\0" },
+    loaded = true,
+    path = "/home/composer3/.local/share/nvim/site/pack/packer/start/vim-polyglot"
+  },
+  ["vim-sleuth"] = {
+    loaded = true,
+    path = "/home/composer3/.local/share/nvim/site/pack/packer/start/vim-sleuth"
+  },
   ["vim-terminal-help"] = {
     loaded = true,
     path = "/home/composer3/.local/share/nvim/site/pack/packer/start/vim-terminal-help"
@@ -222,14 +231,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: FTerm.nvim
-time([[Config for FTerm.nvim]], true)
-try_loadstring("\27LJ\1\2\v\0\0\1\0\0\0\1G\0\1\0\0", "config", "FTerm.nvim")
-time([[Config for FTerm.nvim]], false)
 -- Config for: onedark.nvim
 time([[Config for onedark.nvim]], true)
 try_loadstring("\27LJ\1\0025\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\fonedark\frequire\0", "config", "onedark.nvim")
 time([[Config for onedark.nvim]], false)
+-- Config for: FTerm.nvim
+time([[Config for FTerm.nvim]], true)
+try_loadstring("\27LJ\1\2\v\0\0\1\0\0\0\1G\0\1\0\0", "config", "FTerm.nvim")
+time([[Config for FTerm.nvim]], false)
+-- Config for: vim-polyglot
+time([[Config for vim-polyglot]], true)
+try_loadstring("\27LJ\1\2@\0\0\2\0\4\0\0054\0\0\0007\0\1\0003\1\3\0:\1\2\0G\0\1\0\1\2\0\0\rftdetect\22polyglot_disabled\6g\bvim\0", "config", "vim-polyglot")
+time([[Config for vim-polyglot]], false)
 if should_profile then save_profiles() end
 
 end)
