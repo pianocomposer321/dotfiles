@@ -33,9 +33,8 @@ function M.setup()
                 if #line ~= col then
                     return false
                 end
-                local next_line = utils.text_get_line(0, row + 1)
-                -- check the next line is '}'
-                if next_line == '}' then
+                local re = vim.regex("\\s*}")
+                if re:match_line(0, row + 1) then
                     return true
                 end
                 return false
@@ -43,7 +42,8 @@ function M.setup()
             :set_end_pair_length(0)
             :replace_endpair(function()
                 --move to next line and insert
-                return '<bs><esc>ja'
+                -- return '<bs><esc>ja'
+                return '<bs><esc>]}a'
             end),
     })
 end
