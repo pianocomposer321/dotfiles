@@ -5,11 +5,22 @@ local utils = require('nvim-autopairs.utils')
 
 local M = {}
 
+local remap = vim.api.nvim_set_keymap
+
+-- skip it, if you use another global object
+_G.MUtils= {}
+
+MUtils.completion_confirm=function()
+    return npairs.autopairs_cr()
+end
+
 function M.setup()
     npairs.setup {}
-    require("nvim-autopairs.completion.cmp").setup({
-        map_cr = true
-    })
+    remap('i' , '<CR>','v:lua.MUtils.completion_confirm()', {expr = true , noremap = true})
+
+    -- require("nvim-autopairs.completion.cmp").setup({
+    --     map_cr = true
+    -- })
     npairs.add_rules({
         Rule('', '}')
             :use_key('}')
