@@ -1,1 +1,0 @@
-/home/composer3/.fzf/shell/key-bindings.fish
